@@ -76,9 +76,12 @@ public class Main {
                     System.out.println("Funcionário cadastrado com sucesso!");
                     break;
                 }
-                case 4: clinica.listarFuncionarios();
+                case 4:
+                    clinica.listarFuncionarios();
                     break;
-                case 5: clinica.listarDonos();
+                case 5:
+                    clinica.listarDonos();
+                    sc.nextLine();
                     break;
                 case 6: {
                     System.out.print("Nome do animal para registrar atendimento: ");

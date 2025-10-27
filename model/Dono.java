@@ -44,10 +44,19 @@ public class Dono extends Pessoa {
     }
 
     @Override
-    public void exibirDados() {
-        System.out.println("------Dados do Dono-------"); 
-        super.exibirDados();
-        System.out.println("CPF: " + cpf);
-        System.out.println("Endereço: " + endereco);
+public void exibirDados() {
+    System.out.println("------Dados do Dono-------"); 
+    super.exibirDados();
+    System.out.println("CPF: " + cpf);
+    System.out.println("Endereço: " + endereco);
+
+    if (listaAnimais.isEmpty()) {
+        System.out.println("Este dono não possui animais cadastrados.");
+    } else {
+        System.out.println("Animais cadastrados:");
+        for (Animal a : listaAnimais) {
+            a.exibirInformacoes(); // imprime as informações de cada pet
+          }
+        }
     }
 }
